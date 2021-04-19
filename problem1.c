@@ -2,6 +2,8 @@
 //we get 3, 5, 6 and 9. The sum of these multiples is 23.
 //Find the sum of all the multiples of 3 or 5 below 1000.
 
+
+//SOLUTION EXPLINATION
 //arithmetic series sum formula: 1/2 * n * (a1 + an)
 //n number of terms
 //a1 is the first term (3 or 5)
@@ -17,7 +19,7 @@ int sumSeries(int n, int f, int l){
   return i;
 }
 
-int main(){
+void main(){
   printf("Project Euler - Problem 1\n\n");
 
   // +3
