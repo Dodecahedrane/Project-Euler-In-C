@@ -6,9 +6,21 @@
 
 #include<stdio.h>
 #include<math.h>
+int sum;
 
 void main(){
   printf("Project Euler - Problem 2\n\n");
+  int cTerm = 2;  //current term
+  int pTerm = 1;  //previous term
 
+  while (cTerm < 4000000){
+    if(cTerm%2 == 0){
+      sum = sum + cTerm;
+    }
+    int nTerm = cTerm + pTerm;    //next term
+    pTerm = cTerm;
+    cTerm = nTerm;
+  }
 
+  printf("%i\n", sum);
 }
