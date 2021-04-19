@@ -17,7 +17,6 @@ int sumSeries(int n, int f, int l){
   return i;
 }
 
-
 int main(){
   printf("Project Euler - Problem 1\n\n");
 
