@@ -4,9 +4,28 @@
 #include<stdio.h>
 #include<math.h>
 
-#define n 600851475143;
+long int n = 600851475143;
+
+
+long int getMaxPF(){
+  int p = 2;
+  while (n>=p*p){
+    if(n%p==0){
+      printf("%i *", p);
+      n = n/p;
+    } else{
+      p++;
+    }
+  }
+  
+  return n;
+}
+
 
 void main(){
   printf("Project Euler - Problem 3\n\n");
 
+  long int max = getMaxPF();
+
+  printf("%li\n", max);
 }
