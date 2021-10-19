@@ -3,47 +3,44 @@
 
 //Find the largest palindrome made from the product of two 3-digit numbers.
 
-
-//Is there a way to do this without just brute forcing it??????
-
 #include<stdio.h>
 #include<math.h>
+#include <stdbool.h>
 
-int isPalindrome(int t){
-  int tCopy = t;
-  int len = 0;
-  while (tCopy != 0) {
-    tCopy /= 10;
-    len++;
+int isPalindrome(int intToCheck){
+  char strToCheck[6];
+  sprintf(strToCheck, "%d", intToCheck);
+
+  //This is a proper shit solution. need to do this properly at some point
+  char a = strToCheck[0];
+  char b = strToCheck[1];
+  char c = strToCheck[2];
+  char d = strToCheck[3];
+  char e = strToCheck[4];
+  char f = strToCheck[5];
+
+  if(a==f & b==e & c==d){
+      return 1;
   }
-  char chars[len] ;
-  sprintf(chars, "%i", t);
-
-  printf("Number is %i of len %i\n",t,len );
-
-  for(int i = 0; i <= floor(len/2); i++){
-    int j = len-i;  //opposit char to check
-    printf("Char A is %c and Char B is %c\n",chars[i],chars[j]);
-    if(chars[i]!=chars[j]){
-        printf("")
+  else{
       return 0;
-    }
   }
-  return 1;
 }
 
 void main(){
   printf("Project Euler - Problem 4\n\n");
+
   int max = 0;
-  for(int i = 105; i>99; i--){
-    for(int j = 105; j>99; j--){
-      int p = i*j;
-      if(isPalindrome(p) == 1 && p > max){
-        max = p;
-      }
+  for(int i = 999; i>99; i--){
+      for(int j = 999; j>99; j--){
+        int p = i*j;
+        if(isPalindrome(p) == 1){
+            if(p>max){
+                max = p;
+            }
+        }
     }
   }
 
-  printf("%i\n", max);
-
+  printf("%i\n",max);
 }
