@@ -10,4 +10,4 @@ These are my solutions, written in C, to the first 100 problems on projecteuler.
 - Problem 3 Completed
 - Problem 4 Completed (Need to refactor the code though)
 - Problem 5 Completed
-- Problem 6 In Progress
+- Problem 6 Completed
