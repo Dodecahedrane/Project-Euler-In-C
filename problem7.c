@@ -8,7 +8,7 @@
 
 bool isPrime(int n){
     //https://en.wikipedia.org/wiki/Primality_test
-    for(int i = 2; i < n; i++){
+    for(int i = 2; i < n/2; i++){
         if(n%i == 0){
             return false;
         }
@@ -24,8 +24,6 @@ void main(){
   int i = 1;
   while(primesFound != 10001){
       if(isPrime(i)){
-          printf("Primes Found: %i\n", primesFound);
-
           primesFound++;
           maxPrime = i;
           i = i + 2;  //+2 because no primes are even
