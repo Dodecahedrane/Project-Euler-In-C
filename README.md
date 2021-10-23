@@ -12,3 +12,4 @@ These are my solutions, written in C, to the first 100 problems on projecteuler.
 - Problem 5 Completed
 - Problem 6 Completed
 - Problem 7 Completed
+- Problem 8 In Progress
