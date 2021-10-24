@@ -22,30 +22,37 @@ void main(){
   }
 
   int blockToTest[13];
-  int maxProduct;
+  long int maxProduct = 0;
 
   for(int i = 0; i <= 987; i++){
-      int product;
 
+      //blockToTest
       for(int j = 0; j <= 13; j++){
-          product = product * numbersIntArr[i+j];
-          //printf("%i\n",numbersIntArr[i+j]);
           blockToTest[j] = numbersIntArr[i+j];
       }
 
       //print blockToTest
-      for(int p = 0; p < 13; p++){
-          printf("%i",blockToTest[p]);
-      }
       printf("\n");
+      for(int j = 0; j < 13; j++){
+          printf("%i",blockToTest[j]);
+      }
+      printf("\n\n");
+
+      //product of blockToTest
+      long int product = 1;
+      for(int j = 0; j < 13; j++){
+          printf("Number %i: %i\n",i,blockToTest[j]);
+          product = product * blockToTest[j];
+      }
+      printf("%ld\n",product );
 
 
-
+      //break;
       if(product > maxProduct){
         maxProduct = product;
       }
   }
 
-  printf("Max Product: %i\n",maxProduct);
+  printf("Max Product: %ld\n",maxProduct);
 
 }
