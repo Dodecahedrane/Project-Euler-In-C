@@ -21,33 +21,15 @@ void main(){
       numbersIntArr[i] = c - '0';
   }
 
-  int blockToTest[13];
   long int maxProduct = 0;
 
   for(int i = 0; i <= 987; i++){
-
-      //blockToTest
-      for(int j = 0; j <= 13; j++){
-          blockToTest[j] = numbersIntArr[i+j];
-      }
-
-      //print blockToTest
-      printf("\n");
-      for(int j = 0; j < 13; j++){
-          printf("%i",blockToTest[j]);
-      }
-      printf("\n\n");
-
-      //product of blockToTest
       long int product = 1;
+
       for(int j = 0; j < 13; j++){
-          printf("Number %i: %i\n",i,blockToTest[j]);
-          product = product * blockToTest[j];
+          product = product * numbersIntArr[i+j];
       }
-      printf("%ld\n",product );
-
-
-      //break;
+      
       if(product > maxProduct){
         maxProduct = product;
       }
