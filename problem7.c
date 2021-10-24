@@ -31,7 +31,6 @@ void main(){
         i = i + 2;  //+2 because no primes are even
       }
   }
-
-
+  
   printf("10,001th prime is %i \n", maxPrime);
 }
