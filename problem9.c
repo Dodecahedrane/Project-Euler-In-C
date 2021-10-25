@@ -12,6 +12,22 @@
 
 void main(){
   printf("Project Euler - Problem 9\n\n");
+  int a = 1;
+  int b = 2;
+  int c = 3;
 
+  
 
+}
+
+bool evalPythag(int a,int b, int c){
+    return true;
+}
+
+bool evalOneK(int a, int b, int c){
+    return true;
+}
+
+bool evalGreaterThan(int a, int b, int c){
+    return true;
 }
