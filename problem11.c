@@ -31,6 +31,8 @@
 #include<math.h>
 #include<stdbool.h>
 
+int max = 0;
+
 int a[20][20] = {
    {8,2,22,97,38,15,0,40,0,75,4,5,7,78,52,12,50,77,91,8},
    {49,49,99,40,17,81,18,57,60,87,17,40,98,43,69,48,4,56,62,00},
@@ -53,6 +55,36 @@ int a[20][20] = {
    {20,73,35,29,78,31,90,1,74,31,49,71,48,86,81,16,23,57,05,54},
    {1,70,54,71,83,51,54,69,16,92,33,48,61,43,52,1,89,19,67,48},
 };
+
+int largestHorizontal(){
+    for(int i = 0; i < 20; i++){
+        for(int j = 0; j < 20; j = 1+4){
+            int sum = a[i][j] + a[i][j+1] + a[i][j+2] + a[i][j+3];
+            if(sum>max){
+                max = sum;
+            }
+        }
+    }
+}
+
+int largestVertical(){
+    for(int i = 0; i < 20; i++){
+        for(int j = 0; j < 20; j = 1+4){
+            int sum = a[j][i] + a[j+1][i] + a[j+2][i] + a[j+3][i];
+            if(sum>max){
+                max = sum;
+            }
+        }
+    }
+}
+
+int largestDiagonalLR(){
+
+}
+
+int largestDiagonalRL(){
+
+}
 
 void main(){
   printf("Project Euler - Problem 11\n\n");
