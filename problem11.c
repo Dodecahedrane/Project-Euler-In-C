@@ -57,36 +57,68 @@ int a[20][20] = {
 };
 
 int largestHorizontal(){
+    printf("Horizontal\n");
     for(int i = 0; i < 20; i++){
-        for(int j = 0; j < 20; j = 1+4){
-            int sum = a[i][j] + a[i][j+1] + a[i][j+2] + a[i][j+3];
-            if(sum>max){
-                max = sum;
+        for(int j = 0; j < 17; j++){
+            printf("%i %i %i %i\n",a[i][j], a[i][j+1], a[i][j+2], a[i][j+3]);
+            int prod = a[i][j] * a[i][j+1] * a[i][j+2] * a[i][j+3];
+            if(prod>max){
+                max = prod;
             }
         }
+        printf("\n");
     }
 }
 
 int largestVertical(){
+    printf("Vertical \n");
     for(int i = 0; i < 20; i++){
-        for(int j = 0; j < 20; j = 1+4){
-            int sum = a[j][i] + a[j+1][i] + a[j+2][i] + a[j+3][i];
-            if(sum>max){
-                max = sum;
+        for(int j = 0; j < 17; j++){
+            printf("%i %i %i %i\n",a[j][i], a[j+1][i], a[j+2][i], a[j+3][i]);
+            int prod = a[j][i] * a[j+1][i] * a[j+2][i] * a[j+3][i];
+            if(prod>max){
+                max = prod;
             }
         }
+        printf("\n");
     }
 }
 
 int largestDiagonalLR(){
-
+    printf("Diag LR\n");
+    for(int i = 0; i < 17; i++){
+        for(int j = 0; j < 17; j++){
+            printf("%i %i %i %i\n",a[i][j], a[i+1][j+1], a[i+2][j+2], a[i+3][j+3]);
+            int prod = a[i][j] * a[i+1][j+1] * a[i+2][j+2] * a[i+3][j+3];
+            if(prod>max){
+                max = prod;
+            }
+        }
+        printf("\n");
+    }
 }
 
 int largestDiagonalRL(){
-
+    printf("diag RL\n");
+    for(int i = 0; i < 17; i++){
+        for(int j = 3; j < 20; j++){
+            printf("%i %i %i %i\n",a[i][j], a[i+1][j-1], a[i+2][j-2], a[i+3][j-3]);
+            int prod = a[i][j] * a[i+1][j-1] * a[i+2][j-2] * a[i+3][j-3];
+            if(prod>max){
+                max = prod;
+            }
+        }
+        printf("\n");
+    }
 }
 
 void main(){
   printf("Project Euler - Problem 11\n\n");
 
+  largestVertical();
+  largestHorizontal();
+  largestDiagonalLR();
+  largestDiagonalRL();
+
+  printf("Max: %i\n",max);
 }
