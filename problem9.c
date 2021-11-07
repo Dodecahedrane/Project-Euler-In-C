@@ -11,15 +11,24 @@
 #include<stdbool.h>
 
 bool evalPythag(int a,int b, int c){
-    return true;
+    if((a*a) * (b*b) == (c*c)){
+        return true;
+    }
+    return false;
 }
 
 bool evalOneK(int a, int b, int c){
-    return true;
+    if(a+b+c = 1000){
+        return true;
+    }
+    return false;
 }
 
 bool evalGreaterThan(int a, int b, int c){
-    return true;
+    if(a < b & b < c){
+        return true;
+    }
+    return false;
 }
 
 
@@ -28,7 +37,9 @@ void main(){
   int a = 1;
   int b = 2;
   int c = 3;
-  
+
+  //How to do this?
+  //Is brute forcing this the best solution?
 
 
 }
