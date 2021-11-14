@@ -18,7 +18,7 @@ bool evalPythag(int a,int b, int c){
 }
 
 bool evalOneK(int a, int b, int c){
-    if(a+b+c = 1000){
+    if(a+b+c == 1000){
         return true;
     }
     return false;
@@ -41,5 +41,16 @@ void main(){
   //How to do this?
   //Is brute forcing this the best solution?
 
+  bool found = false;
+  while(!found){
+
+
+      found = evalGreaterThan(a,b,c);
+      found = evalOneK(a,b,c);
+      found = evalPythag(a,b,c);
+
+  }
+
+  printf("A=%i, B=%i, C=%i",a,b,c);
 
 }
