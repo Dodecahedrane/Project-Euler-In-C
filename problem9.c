@@ -43,7 +43,13 @@ void main(){
 
   bool found = false;
   while(!found){
-
+      for(a = 1; a < b; a++){
+          for(b = 2; b < c; b++){
+              for(c = 3; !found; c++){
+                  
+              }
+          }
+      }
 
       found = evalGreaterThan(a,b,c);
       found = evalOneK(a,b,c);
